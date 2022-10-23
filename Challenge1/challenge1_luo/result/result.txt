@@ -1,0 +1,15 @@
+Régression linéaire multiple
+Moyenne de RMSE=180152.35103191872 
+Moyenne de MAPE=21.43980351561862
+Régression ridge
+Moyenne de RMSE=180137.65710084018 
+Moyenne de MAPE=21.386804211894933
+Régression LASSO-LARS
+Moyenne de RMSE=180144.30976216626 
+Moyenne de MAPE=21.434284806859466
+Méthode de Nadaraya-Watson
+Moyenne de RMSE=250647.63494380674 
+Moyenne de MAPE=35.377166426931794
+Generalized Additive Models
+Moyenne de RMSE=148315.792695841 
+Moyenne de MAPE=18.171856912552986
