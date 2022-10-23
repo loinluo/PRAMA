@@ -1,0 +1,207 @@
+*Bagging
+n_estimators=50 
+Moyenne de RMSE=76093.32562654148 
+Moyenne de MAPE=12.118088735562628
+n_estimators=100 
+Moyenne de RMSE=75891.5855315814 
+Moyenne de MAPE=12.071898075336948
+n_estimators=150 
+Moyenne de RMSE=75571.6068141172 
+Moyenne de MAPE=11.998380395403794
+n_estimators=200 
+Moyenne de RMSE=75514.77973781142 
+Moyenne de MAPE=12.002643124712309
+n_estimators=250 
+Moyenne de RMSE=75455.73393448113 
+Moyenne de MAPE=11.994392118321898
+n_estimators=300 
+Moyenne de RMSE=75481.54335307464 
+Moyenne de MAPE=12.002052736758444
+n_estimators=350 
+Moyenne de RMSE=75360.71327160853 
+Moyenne de MAPE=11.97865978572033
+
+*Random Forest
+n_estimators=50 
+Moyenne de RMSE=76308.76742840448 
+Moyenne de MAPE=12.111061709746412
+n_estimators=100 
+Moyenne de RMSE=75848.14893752844 
+Moyenne de MAPE=12.044593526442958
+n_estimators=150 
+Moyenne de RMSE=75607.47614840367 
+Moyenne de MAPE=12.013449250953247
+n_estimators=200 
+Moyenne de RMSE=75527.13830228112 
+Moyenne de MAPE=12.000526637273342
+n_estimators=250 
+Moyenne de RMSE=75518.60307114097 
+Moyenne de MAPE=12.002888918953548
+n_estimators=300 
+Moyenne de RMSE=75496.36632800833 
+Moyenne de MAPE=11.999131493078519
+n_estimators=350 
+Moyenne de RMSE=75472.28981887393 
+Moyenne de MAPE=11.991734369108901
+
+*Boosting
+result9 = L2Boosting(5, Xtrain, Ytrain, 50, 50, 1, 1)
+rmse_error_synt['L2Boosting'] = result9[0]
+mape_error_synt['L2Boosting']  = result9[1]
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result9[0],result9[1]))
+result9 = L2Boosting(5, Xtrain, Ytrain, 50, 50, 1, 0.1)
+rmse_error_synt['L2Boosting'] = result9[0]
+mape_error_synt['L2Boosting']  = result9[1]
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result9[0],result9[1]))
+result9 = L2Boosting(5, Xtrain, Ytrain, 50, 50, 1, 0.01)
+rmse_error_synt['L2Boosting'] = result9[0]
+mape_error_synt['L2Boosting']  = result9[1]
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result9[0],result9[1]))
+result9 = L2Boosting(5, Xtrain, Ytrain, 50, 50, 1, 0.05)
+rmse_error_synt['L2Boosting'] = result9[0]
+mape_error_synt['L2Boosting']  = result9[1]
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result9[0],result9[1]))
+result9 = L2Boosting(5, Xtrain, Ytrain, 50, 50, 0.1, 0.1)
+rmse_error_synt['L2Boosting'] = result9[0]
+mape_error_synt['L2Boosting']  = result9[1]
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result9[0],result9[1]))
+result9 = L2Boosting(5, Xtrain, Ytrain, 50, 50, 0.5, 0.1)
+rmse_error_synt['L2Boosting'] = result9[0]
+mape_error_synt['L2Boosting']  = result9[1]
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result9[0],result9[1]))
+result9 = L2Boosting(5, Xtrain, Ytrain, 50, 50, 0.3, 0.1)
+rmse_error_synt['L2Boosting'] = result9[0]
+mape_error_synt['L2Boosting']  = result9[1]
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result9[0],result9[1]))
+result9 = L2Boosting(5, Xtrain, Ytrain, 50, 100, 0.3, 0.1)
+rmse_error_synt['L2Boosting'] = result9[0]
+mape_error_synt['L2Boosting']  = result9[1]
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result9[0],result9[1]))
+result9 = L2Boosting(5, Xtrain, Ytrain, 50, 10, 0.3, 0.1)
+rmse_error_synt['L2Boosting'] = result9[0]
+mape_error_synt['L2Boosting']  = result9[1]
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result9[0],result9[1]))
+Moyenne de RMSE=108159.431297905 
+Moyenne de MAPE=17.45410416918562
+Moyenne de RMSE=73125.96097848484 
+Moyenne de MAPE=11.745391950258508
+Moyenne de RMSE=145230.46618218112 
+Moyenne de MAPE=29.82216140613743
+Moyenne de RMSE=78274.40980046496 
+Moyenne de MAPE=13.11511609593418
+Moyenne de RMSE=73509.03650036923 
+Moyenne de MAPE=11.770073702688261
+Moyenne de RMSE=76563.3576707439 
+Moyenne de MAPE=12.23469622965434
+Moyenne de RMSE=74751.11147771814 
+Moyenne de MAPE=11.963239544707607
+Moyenne de RMSE=74751.11147771814 
+Moyenne de MAPE=11.963239544707607
+Moyenne de RMSE=74751.11147771814 
+Moyenne de MAPE=11.963239544707607
+
+
+
+
+*NN
+k, num_epochs, learning_rate, weight_decay, batch_size = 5, 200, 1, 0, 64
+result11 = nn_cv(k, train_features, train_labels, num_epochs, learning_rate, weight_decay, batch_size)
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result10[0],result10[1]))
+Moyenne de RMSE=78714.99326125646 
+Moyenne de MAPE=12.433489508899257
+
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result11[0],result11[1]))
+Moyenne de RMSE=210735.065625 
+Moyenne de MAPE=44.10749667618552
+
+k, num_epochs, learning_rate, weight_decay, batch_size = 5, 100, 10, 0, 64
+result11 = nn_cv(k, train_features, train_labels, num_epochs, learning_rate, weight_decay, batch_size)
+
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result11[0],result11[1]))
+Moyenne de RMSE=31036723009945.6 
+Moyenne de MAPE=6990886846.932999
+
+k, num_epochs, learning_rate, weight_decay, batch_size = 5, 100, 0.1, 0, 64
+result11 = nn_cv(k, train_features, train_labels, num_epochs, learning_rate, weight_decay, batch_size)
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result11[0],result11[1]))
+k, num_epochs, learning_rate, weight_decay, batch_size = 5, 100, 0.01, 0, 64
+result11 = nn_cv(k, train_features, train_labels, num_epochs, learning_rate, weight_decay, batch_size)
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result11[0],result11[1]))
+k, num_epochs, learning_rate, weight_decay, batch_size = 5, 100, 0.1, 5, 64
+result11 = nn_cv(k, train_features, train_labels, num_epochs, learning_rate, weight_decay, batch_size)
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result11[0],result11[1]))
+k, num_epochs, learning_rate, weight_decay, batch_size = 5, 100, 0.1, 5, 128
+result11 = nn_cv(k, train_features, train_labels, num_epochs, learning_rate, weight_decay, batch_size)
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result11[0],result11[1]))
+Moyenne de RMSE=79872.0125 
+Moyenne de MAPE=12.713291663799543
+Moyenne de RMSE=80502.809375 
+Moyenne de MAPE=12.664607918911216
+Moyenne de RMSE=80287.5453125 
+Moyenne de MAPE=12.811845105637094
+Moyenne de RMSE=79114.1125 
+Moyenne de MAPE=12.632683018687086
+
+k, num_epochs, learning_rate, weight_decay, batch_size = 5, 100, 0.1, 0, 256
+result11 = nn_cv(k, train_features, train_labels, num_epochs, learning_rate, weight_decay, batch_size)
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result11[0],result11[1]))
+Moyenne de RMSE=79272.58125 
+Moyenne de MAPE=12.864249134333713
+
+k, num_epochs, learning_rate, weight_decay, batch_size = 5, 100, 0.1, 5, 256
+result11 = nn_cv(k, train_features, train_labels, num_epochs, learning_rate, weight_decay, batch_size)
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result11[0],result11[1]))
+k, num_epochs, learning_rate, weight_decay, batch_size = 5, 100, 0.05, 5, 256
+result11 = nn_cv(k, train_features, train_labels, num_epochs, learning_rate, weight_decay, batch_size)
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result11[0],result11[1]))
+k, num_epochs, learning_rate, weight_decay, batch_size = 5, 100, 0.5, 5, 256
+result11 = nn_cv(k, train_features, train_labels, num_epochs, learning_rate, weight_decay, batch_size)
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result11[0],result11[1]))
+Moyenne de RMSE=77656.609375 
+Moyenne de MAPE=12.752651755785035
+Moyenne de RMSE=80058.8390625 
+Moyenne de MAPE=13.06625265413652
+Moyenne de RMSE=196758.9109375 
+Moyenne de MAPE=36.549935474377754
+
+k, num_epochs, learning_rate, weight_decay, batch_size = 5, 200, 0.1, 5, 256
+result11 = nn_cv(k, train_features, train_labels, num_epochs, learning_rate, weight_decay, batch_size)
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result11[0],result11[1]))
+Moyenne de RMSE=85738.6046875 
+Moyenne de MAPE=13.57425177311065
+
+k, num_epochs, learning_rate, weight_decay, batch_size = 5, 200, 0.05, 5, 256
+result11 = nn_cv(k, train_features, train_labels, num_epochs, learning_rate, weight_decay, batch_size)
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result11[0],result11[1]))
+Moyenne de RMSE=87192.159375 
+Moyenne de MAPE=13.687225946580588
+
+k, num_epochs, learning_rate, weight_decay, batch_size = 5, 100, 0.1, 1, 256
+result11 = nn_cv(k, train_features, train_labels, num_epochs, learning_rate, weight_decay, batch_size)
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result11[0],result11[1]))
+Moyenne de RMSE=80230.8875 
+Moyenne de MAPE=12.688625320093779
+
+k, num_epochs, learning_rate, weight_decay, batch_size = 5, 100, 0.1, 0, 256
+result11 = nn_cv(k, train_features, train_labels, num_epochs, learning_rate, weight_decay, batch_size)
+print("Moyenne de RMSE={} \nMoyenne de MAPE={}".format(result11[0],result11[1]))
+Moyenne de RMSE=77891.2265625 
+Moyenne de MAPE=12.26877429118581
+
+net = get_net(test_features)
+train_iter = d2l.load_array((train_features, train_labels.unsqueeze(-1)),batch_size)
+optimizer = torch.optim.Adam(net.parameters(),lr=learning_rate,
+                                 weight_decay=weight_decay)
+for epoch in range(num_epochs):
+    for X, Y in train_iter:
+        optimizer.zero_grad()
+        l = loss(net(X), Y)
+        l.backward()
+        optimizer.step()
+    Y_prediction = net(test_features)
+
+Y_prediction = Y_prediction.detach().numpy()
+Y_prediction = Y_prediction.reshape(len(Y_prediction))
+test_data['prix'] = Y_prediction
+submission = pd.concat([test_data['id'],test_data['prix']], axis=1)
+submission.to_csv('submission10.csv',index=False)
